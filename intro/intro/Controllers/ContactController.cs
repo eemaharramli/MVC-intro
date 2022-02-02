@@ -17,13 +17,14 @@ namespace intro.Controllers
         {
             ViewData["Name"] = "Fuad";
             ViewData["Surname"] = "Aghazadeh";
+            TempData["age"] = RedirectToAction(nameof(Update));
 
             return View();
         }
 
         public IActionResult Update()
         {
-            TempData["FuadAge"] = 29;
+            TempData["FuadsAge"] = 29;
             return View();
         }
     }
