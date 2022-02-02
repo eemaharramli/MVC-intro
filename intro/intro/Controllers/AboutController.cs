@@ -11,9 +11,11 @@ namespace intro.Controllers
 
         public IActionResult Create()
         {
-            // return View();
-            // return RedirectToAction("Index");
             return RedirectToAction(nameof(Index), "Products");
+        }
+
+        public IActionResult WrongInput() {
+            return RedirectToAction(nameof(Index), "Home");
         }
     }
 }
